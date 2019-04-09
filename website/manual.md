@@ -324,6 +324,9 @@ const { permissions, revokePermission, open, remove } = Deno;
   revokePermission("read");
   revokePermission("write");
 
+  // create a utf-8 text encoder
+  const encoder = new TextEncoder();
+
   // use the log file
   await log.write(encoder.encode("hello\n"));
 
